@@ -1,14 +1,19 @@
+import axios from 'axios'
+
 import { createStore } from 'vuex'
+import  contacts  from "./modules/contacts";
+
 
 export default createStore({
-  state: {
-  },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
+  // state: {
+  // },
+  // mutations: {
+  // },
+  // actions: {
+  // },
+  // getters: {
+  // },
+      modules: {
+    contacts
   }
 })
