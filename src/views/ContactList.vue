@@ -26,12 +26,16 @@ export default {
     ...mapGetters(["CONTACTS"]),
   },
   methods: {
-    ...mapActions(["GET_CONTACTS"]),
+    ...mapActions([
+      "GET_CONTACTS",
+      "GET_USER_TO_HEADER"
+    ]),
     toContactInfo(contact){
       this.$router.push({
         name: 'contact',
         query: {'id': contact.id}
-      })
+      }),
+      this.GET_USER_TO_HEADER(contact.name)
     }
   },
   mounted() {

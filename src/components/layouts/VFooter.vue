@@ -1,6 +1,6 @@
 <template>
   <div class="v-bottom-nav">
-		<router-link to="/contacts">
+		<router-link to="/">
 			<i class="material-icons">person_pin</i>
 		</router-link>
 		<router-link to="/contacts">
