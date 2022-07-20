@@ -3,7 +3,7 @@
 		<router-link to="/">
 			<i class="material-icons">person_pin</i>
 		</router-link>
-		<router-link to="/">
+		<router-link to="/chats">
 			<i class="material-icons">chat</i>
 		</router-link>
 		<router-link to="/">

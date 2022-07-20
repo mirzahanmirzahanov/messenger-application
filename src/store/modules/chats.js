@@ -18,5 +18,8 @@ export default {
 		},
 	},
 	getters: {
+		CHATS(state) {
+			return state.chats
+		}
 	},
 }
