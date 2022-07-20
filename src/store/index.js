@@ -2,6 +2,7 @@ import axios from 'axios'
 
 import { createStore } from 'vuex'
 import  contacts  from "./modules/contacts";
+import  chats  from "./modules/chats";
 
 
 export default createStore({
@@ -13,7 +14,8 @@ export default createStore({
   // },
   // getters: {
   // },
-      modules: {
-    contacts
+  modules: {
+    contacts,
+    chats
   }
 })

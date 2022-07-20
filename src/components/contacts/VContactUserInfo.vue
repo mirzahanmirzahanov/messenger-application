@@ -31,7 +31,6 @@ export default {
     this.CONTACTS.find((contact) => {
       if (contact.id == this.$route.query.id) {
         this.contactData = contact;
-				console.log(contact);
       }
     });
   },

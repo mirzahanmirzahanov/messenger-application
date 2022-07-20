@@ -12,9 +12,9 @@ export default {
 		SET_USER_TO_HEADER(state, user) {
 			if (user) {
 				state.currentUserChat = user;
-			} else[
+			} else {
 				state.currentUserChat = ''
-			]
+			}
 		}
 	},
 	actions: {

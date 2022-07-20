@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import ContactList from '@/views/ContactList.vue'
 import VContactUserInfo from '@/components/contacts/VContactUserInfo.vue'
+import ChatList from '@/views/ChatList.vue'
 
 const routes = [
   {
@@ -13,6 +14,11 @@ const routes = [
     path: '/contact',
     name: 'contact',
     component: VContactUserInfo
+  },
+  {
+    path: '/chats',
+    name: 'chatList',
+    component: ChatList
   },
 ]
 
