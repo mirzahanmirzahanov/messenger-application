@@ -1,10 +1,5 @@
 <template>
   <div class="chat-list">
-    <!-- <v-user 
-			v-for="chat in CHATS"
-			:key="chat.id"
-			:user_data="chat"
-		/> -->
 		<v-user
 			v-for="chat in CHATS"
 			:key="chat.id"
