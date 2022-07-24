@@ -11,8 +11,11 @@
         {{ user_data.chat[user_data.chat.length - 1].text }}
       </p>
     </div>
-    <div class="v-user__time">
-      {{ user_data.chat[user_data.chat.length - 1].time }}
+    <div 
+      class="v-user__time"
+      @click="info"
+      >
+      {{ user_data.chat[user_data.chat.length - 1].time }}g
     </div>
   </div>
 </template>
@@ -32,11 +35,15 @@ export default {
   },
   data: () => ({}),
   methods: {
-    toUserChat() {
-      this.$router.push({
-        name: 'chat',
-        query: {'id': chat.id}
-      })
+    // toUserChat() {
+    //   this.$router.push({
+    //     name: 'chat',
+    //     // params: {'messages': this.user_data.chat, 'user': this.user_data}
+    //     params: { 'user': this.user_data }
+    //   })
+    // },
+    info() {
+      console.log(this.user_data);
     }
   },
 };

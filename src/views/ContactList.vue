@@ -5,7 +5,7 @@
       v-for="contact in CONTACTS"
       :key="contact.id"
       :contact_data="contact"
-      @to-contact-info="toContactInfo(contact)"
+      @click="toContactInfo(contact)"
     />
     <!-- ловим эмит to-contact-info, отправленный из ребенка
     и привязываем к нему ф-цию toContactInfo -->

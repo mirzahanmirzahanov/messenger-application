@@ -11,7 +11,13 @@ export default {
 components: {},
 name: 'v-messages', 
 computed: {},
-props: {},
+props: {
+	messages: {
+		type: Array,
+		default: () => [],
+		requred:true
+	}
+},
 data: () => ({}),
 methods: {}
 }

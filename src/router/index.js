@@ -10,22 +10,26 @@ const routes = [
   {
     path: '/',
     name: 'contacts',
-    component: ContactList
+    component: ContactList,
+    props: true
   },
   {
     path: '/contact',
     name: 'contact',
-    component: VContactUserInfo
+    component: VContactUserInfo,
+    props: true
   },
   {
     path: '/chats',
     name: 'chatList',
-    component: ChatList
+    component: ChatList,
+    props: true
   },
   {
     path: '/chat',
     name: 'chat',
-    component: VUserChat
+    component: VUserChat,
+    props: true
   },
 ]
 
@@ -35,3 +39,5 @@ const router = createRouter({
 })
 
 export default router
+
+
