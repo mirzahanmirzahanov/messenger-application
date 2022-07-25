@@ -1,16 +1,16 @@
 <template>
   <div class="v-user-chat">
     <v-messages
-      v-for="message in this.userChatData.chat"
+      v-for="message in this.messagesData"
       :key="message.id"
-      :messages="messageоо"
+      :messages="message"
     />
     <div class="input__field">
       <input
         class="v-user-chat__textfield"
         type="text"
         v-model="textValue"
-        @click="sendMessage"
+        @keypress.enter="sendMessage"
       />
 			<div 
 				class="material-icons"
@@ -37,17 +37,34 @@ export default {
   props: {},
   data: () => ({
     textValue: "",
-    userChatData: {}
+    userData: [],
+    messagesData: []
   }),
   mounted() {
-    this.CHATS.find((chat) => {
-      if (chat.id == this.$route.query.id) {
-        this.userChatData = chat;
+    this.CHATS.find((user) => {
+      if (user.id == this.$route.query.id) {
+        this.userData = user;
+        this.messagesData = user.chat
       }
     });
   },
   methods: {
-    sendMessage() {},
+    // создание нового сообщения
+    sendMessage() {
+      let user = {...this.userData};
+      let chat = {
+        id: this.messagesData.length + 1,
+        time: new Date().toLocaleTimeString('en-US', {
+          hour12: false,
+          hour: 'numeric',
+          minute: 'numeric',
+        }),
+        text: this.textValue,
+        type: 'own'
+      };
+      user.chat.push(chat)
+      console.log(chat);
+    },
   },
 }
 
